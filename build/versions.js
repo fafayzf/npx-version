@@ -2,7 +2,7 @@ var fs = require('fs')
 var path = require('path')
 var colors = require('colors');
 
-var configFile =  path.join(path.resolve('.'), './version.config.json')
+var configFile =  path.join(path.resolve('.'), './version.config.js')
 console.log(configFile, 'configFile');
 
 var versionFiles = null
@@ -25,7 +25,7 @@ if (!packageJson.version) {
   process.exit(1)
 }
 
-var VERSION = process.env.VERSION || process.argv[2] || packageJson.version
+var VERSION = process.env.VERSION || packageJson.version || process.argv[2]
 var VERSION_PATH = versionFiles.outputFile
 
 function splitVersion(version) {
