@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "sh build/release.sh && node build/versions.js",
+    "pub": "sh build/release.sh",
     "build": "node build/index.js"
   },
   "repository": {

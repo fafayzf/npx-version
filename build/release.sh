@@ -16,9 +16,12 @@ then
   git add -A
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
-
+  node build/versions.js
+  git add -A
+  git commit -m "[build] $VERSION"
+  
   # publish
-  git push origin master -f
+  git push origin master -fa
   git push origin refs/tags/v$VERSION
   git checkout dev
   git rebase master
