@@ -21,7 +21,7 @@ then
   git commit -m "[build] $VERSION"
   
   # publish
-  git push origin master -fa
+  git push origin master -f
   git push origin refs/tags/v$VERSION
   git checkout dev
   git rebase master
