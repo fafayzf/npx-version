@@ -24,9 +24,8 @@ if (!packageJson.version) {
   process.exit(1)
 }
 
-var VERSION = process.env.VERSION || packageJson.version
+var VERSION = process.env.VERSION || process.argv[2] || packageJson.version
 var VERSION_PATH = versionFiles.outputFile
-console.log(VERSION_PATH);
 
 function splitVersion(version) {
   var v = version.split('.')

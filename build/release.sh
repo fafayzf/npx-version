@@ -13,12 +13,10 @@ then
   echo "Releasing $VERSION ..."
 
   # commit
+  node build/versions.js $VERSION
   git add -A
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
-  node build/versions.js
-  git add -A
-  git commit -m "[build] $VERSION"
   
   # publish
   git push origin master -f
