@@ -2,7 +2,7 @@ var fs = require('fs')
 var path = require('path')
 var colors = require('colors');
 
-var configFile = path.resolve(__dirname, '../version.config.js')
+var configFile =  path.join(path.resolve('.'), './version.config.json')
 
 var versionFiles = null
 
@@ -11,8 +11,8 @@ try {
 } catch (err) {
   if (err.code === 'MODULE_NOT_FOUND') {
     versionFiles = {
-      entryFile: path.resolve(__dirname, '../package.json'),
-      outputFile: path.resolve(__dirname, '../version.json')
+      entryFile: path.join(path.resolve('.'), './package.json'),
+      outputFile: path.join(path.resolve('.'), './version.json')
     }
   }
 }
