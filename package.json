@@ -1,6 +1,6 @@
 {
   "name": "npx-version",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The version of the package.json",
   "main": "index.js",
   "scripts": {
