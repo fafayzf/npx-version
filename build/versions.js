@@ -3,6 +3,7 @@ var path = require('path')
 var colors = require('colors');
 
 var configFile =  path.join(path.resolve('.'), './version.config.json')
+console.log(configFile, 'configFile');
 
 var versionFiles = null
 
