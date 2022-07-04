@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "sh build/release.sh",
+    "pub": "sh build/release.sh && node build/versions.js",
     "build": "node build/index.js"
   },
   "repository": {
@@ -26,5 +26,8 @@
   "homepage": "https://github.com/fafayzf/npx-version#readme",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "select-version-cli": "0.0.2"
   }
 }
