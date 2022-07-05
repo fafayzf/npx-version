@@ -1,6 +1,6 @@
 var fs = require('fs')
 var path = require('path')
-var colors = require('colors');
+var colors = require('colors')
 
 var configFile =  path.join(path.resolve('.'), './version.config.js')
 
