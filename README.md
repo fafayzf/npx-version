@@ -40,3 +40,6 @@ npx-version init
 npx-version init 9.6.6
 
 ```
+
+
+> 若写入版本号写入错误，请手动在package.json 或 version.json 手动修改版本号，暂不支持自动修复错误的版本号
