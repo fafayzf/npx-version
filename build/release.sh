@@ -21,9 +21,12 @@ then
   # publish
   git push origin master -f
   git push origin refs/tags/v$VERSION
+  git push github master -f
+  git push github refs/tags/v$VERSION
   git checkout dev
   git rebase master
   git push origin dev
+  git push github dev
 
   if [[ $VERSION =~ "beta" ]]
   then
