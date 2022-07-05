@@ -30,18 +30,34 @@ npm i npx-version -g
 
 ```sh
 
-npx-version init
+npx-version create 1.0.0
 
 ```
 
-##### 指定版本
 
+###### 例：
 
-```sh
+package.json
 
-npx-version init 9.6.6
+```json
+
+{
+  "name": "npx-version",
+  "version": "1.1.3",
+  "description": "The version of the package.json",
+  "main": "index.js",
+}
 
 ```
+
+version.json
+
+```json
+
+{"1.0.7":"1.0", "1.1.0":"1.1","1.2.0":"1.2"}
+
+```
+
 
 
 > 若写入版本号写入错误，请手动在package.json 或 version.json 手动修改版本号，暂不支持自动修复错误的版本号

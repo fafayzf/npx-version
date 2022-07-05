@@ -10,7 +10,7 @@ program.version(packageConfig.version)
 
 // 使用zhizu init my
 program
-  .command('init <version>')
+  .command('create <version>')
   .action((version) => {
     push(version)
   });
