@@ -3,7 +3,6 @@ var path = require('path')
 var colors = require('colors');
 
 var configFile =  path.join(path.resolve('.'), './version.config.js')
-console.log(configFile, 'configFile');
 
 var versionFiles = null
 
@@ -32,7 +31,7 @@ function splitVersion(version) {
   return v.slice(0, v.length - 1).join('.')
 }
 
-function createV(version) {
+function createV(version = null) {
   var VERSION = version || process.env.VERSION || packageJson.version || process.argv[2]
   var VERSION_PATH = versionFiles.outputFile
   // 读取verson.js
