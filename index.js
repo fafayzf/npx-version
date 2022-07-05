@@ -10,9 +10,9 @@ program.version(packageConfig.version)
 
 // 使用zhizu init my
 program
-  .command('init')
-  .action(() => {
-    push()
+  .command('init <version>')
+  .action((version) => {
+    push(version)
   });
 
 // program.option('-ig,--initgit', 'init git');

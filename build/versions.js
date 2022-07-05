@@ -25,15 +25,16 @@ if (!packageJson.version) {
   process.exit(1)
 }
 
-var VERSION = process.env.VERSION || packageJson.version || process.argv[2]
-var VERSION_PATH = versionFiles.outputFile
+
 
 function splitVersion(version) {
   var v = version.split('.')
   return v.slice(0, v.length - 1).join('.')
 }
 
-function createV() {
+function createV(version) {
+  var VERSION = version || process.env.VERSION || packageJson.version || process.argv[2]
+  var VERSION_PATH = versionFiles.outputFile
   // 读取verson.js
   fs.access(VERSION_PATH, fs.constants.F_OK | fs.constants.W_OK, function(err) {
     // 若不存在，则直接写入
